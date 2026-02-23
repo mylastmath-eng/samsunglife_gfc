@@ -59,7 +59,7 @@
         <!-- Hero Section -->
         <section class="relative h-[650px] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" alt="Office" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1600" alt="사무실 배경" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-slate-900/70"></div>
             </div>
             <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
@@ -117,6 +117,10 @@
     <!-- [Sub 1] Job Intro -->
     <div id="sub1" class="page-section pt-24 min-h-screen pb-20 fade-in">
         <div class="max-w-5xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2 group">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition"></i> 메인으로 돌아가기
+            </button>
+
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Job Description</h2>
                 <div class="w-16 h-1 bg-Samsung-blue mx-auto"></div>
@@ -129,7 +133,7 @@
                         <h3 class="text-3xl font-bold text-Samsung-blue mb-6">대한민국 기업을 위한<br>금융 전문가</h3>
                         <p class="text-slate-600 leading-relaxed mb-8">
                             GFC는 중소기업 및 중견기업 CEO의 든든한 동반자입니다. <br><br>
-                            단순 보험 판매를 넘어 기업 운영에 필수적인 **법인세 절세, 경영권 승계, 가업 상속, 노무 리스크 관리** 등 종합적인 금융 솔루션을 제공하는 컨설턴트로서 활약하게 됩니다.
+                            단순 보험 판매를 넘어 기업 운영에 필수적인 <strong class="text-slate-900">법인세 절세, 경영권 승계, 가업 상속, 노무 리스크 관리</strong> 등 종합적인 금융 솔루션을 제공하는 컨설턴트로서 활약하게 됩니다.
                         </p>
                         <div class="space-y-4">
                             <div class="flex items-center gap-3">
@@ -146,15 +150,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-slate-100">
-                        <img src="https://images.unsplash.com/photo-1600880218817-9798e141ea28?auto=format&fit=crop&q=80&w=800" alt="Meeting" class="w-full h-full object-cover">
+                    <div class="bg-slate-100 relative">
+                        <!-- Updated Meeting Image -->
+                        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1000" alt="비즈니스 미팅 및 컨설팅" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-slate-900 text-white p-10 rounded-3xl">
-                    <h4 class="text-xl font-bold mb-4">신입 교육 커리큘럼</h4>
+                    <h4 class="text-xl font-bold mb-4 text-blue-400">신입 교육 커리큘럼</h4>
                     <ul class="space-y-3 text-slate-400">
                         <li>• 1~2개월: 금융 기초 및 자격 취득 집중 교육</li>
                         <li>• 3~4개월: 법인 영업 프로세스 및 현장 동행 교육</li>
@@ -162,7 +167,7 @@
                     </ul>
                 </div>
                 <div class="bg-blue-50 p-10 rounded-3xl border border-blue-100">
-                    <h4 class="text-xl font-bold text-Samsung-blue mb-4">지원 자격</h4>
+                    <h4 class="text-xl font-bold text-Samsung-blue mb-4 text-blue-700">지원 자격</h4>
                     <p class="text-slate-600 leading-relaxed">
                         학력/전공 무관하며, 새로운 분야에 도전하고 싶은 열정만 있다면 누구나 가능합니다. <br> 특히 영업 경력이 있거나, 대인 관계가 원활하신 분을 우대합니다.
                     </p>
@@ -174,6 +179,10 @@
     <!-- [Sub 2] Salary & Benefits -->
     <div id="sub2" class="page-section pt-24 min-h-screen pb-20 fade-in">
         <div class="max-w-5xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2 group">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition"></i> 메인으로 돌아가기
+            </button>
+
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-slate-900 mb-4">SALARY & BENEFITS</h2>
                 <div class="w-16 h-1 bg-Samsung-blue mx-auto"></div>
@@ -225,15 +234,19 @@
     <!-- [Sub 3] Manager Info -->
     <div id="sub3" class="page-section pt-24 min-h-screen pb-20 fade-in">
         <div class="max-w-4xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2 group">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition"></i> 메인으로 돌아가기
+            </button>
+
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-black text-slate-900 mb-4">MENTOR INFO</h2>
                 <div class="w-16 h-1 bg-Samsung-blue mx-auto"></div>
                 <p class="mt-6 text-slate-500 text-lg">당신의 성공을 이끌어줄 든든한 멘토를 소개합니다.</p>
             </div>
 
-            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row mb-12">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row mb-12 border border-slate-100">
                 <div class="md:w-1/3">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Manager" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="담당자 사진" class="w-full h-full object-cover">
                 </div>
                 <div class="md:w-2/3 p-10 md:p-14">
                     <h3 class="text-slate-400 font-bold mb-2 uppercase text-sm tracking-widest">Recruiting Manager</h3>
@@ -256,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="bg-slate-100 rounded-3xl p-8">
+            <div class="bg-white rounded-3xl p-8 shadow-lg border border-slate-100">
                 <h5 class="font-bold mb-4 text-slate-800 text-center uppercase tracking-wide">근무지 안내</h5>
                 <div class="w-full h-64 bg-slate-200 rounded-2xl overflow-hidden mb-4 shadow-inner">
                     <iframe src="https://maps.google.com/maps?q=부산진구%20중앙대로%20639&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -269,6 +282,10 @@
     <!-- [Sub 4] Application Form -->
     <div id="sub4" class="page-section pt-24 min-h-screen pb-20 fade-in">
         <div class="max-w-2xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2 group">
+                <i class="fas fa-arrow-left group-hover:-translate-x-1 transition"></i> 메인으로 돌아가기
+            </button>
+
             <div class="bg-white rounded-[40px] shadow-2xl overflow-hidden border border-slate-100">
                 <div class="bg-Samsung-blue p-12 text-center text-white">
                     <h2 class="text-4xl font-black mb-4">입사 지원</h2>
@@ -276,7 +293,6 @@
                 </div>
 
                 <div class="p-10 md:p-16">
-                    <!-- Form Section -->
                     <form id="recruitment-form" action="https://formspree.io/f/xjgepopj" method="POST" class="space-y-8">
                         <div>
                             <label for="name" class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">성함</label>
@@ -308,7 +324,6 @@
                             <textarea name="message" id="message" rows="4" class="w-full px-5 py-4 rounded-2xl border border-slate-200 focus:ring-4 focus:ring-blue-100 focus:border-Samsung-blue outline-none transition text-lg" placeholder="면접 희망 일시나 궁금한 점을 적어주세요."></textarea>
                         </div>
 
-                        <!-- Submit Button -->
                         <div class="pt-4">
                             <button type="submit" id="submit-btn" class="w-full bg-Samsung-blue text-white font-black py-5 rounded-2xl text-xl hover:bg-blue-800 transition shadow-xl transform active:scale-95 flex items-center justify-center gap-3">
                                 <span>지원서 제출하기</span>
@@ -316,7 +331,6 @@
                             </button>
                         </div>
 
-                        <!-- Status Message Area -->
                         <div id="form-status" class="hidden mt-6 text-center p-6 rounded-2xl font-bold"></div>
 
                         <p class="text-xs text-center text-slate-400 mt-6 leading-relaxed">
@@ -329,7 +343,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 py-16 text-slate-500">
+    <footer class="bg-slate-900 py-16 text-slate-500 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <div class="flex items-center justify-center gap-3 mb-8 opacity-40">
                 <div class="bg-white text-slate-900 font-bold px-2 py-0.5 rounded text-sm uppercase">Samsung</div>
@@ -360,17 +374,14 @@
             menu.classList.toggle('hidden');
         }
 
-        // --- AJAX Form Submission (Stay on page) ---
+        // --- AJAX Form Submission ---
         const form = document.getElementById("recruitment-form");
         const status = document.getElementById("form-status");
         const submitBtn = document.getElementById("submit-btn");
 
         async function handleSubmit(event) {
-            event.preventDefault(); // 기본 폼 제출 동작(리디렉션) 차단
-            
+            event.preventDefault();
             const formData = new FormData(event.target);
-            
-            // 전송 중 상태 표시
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner animate-spin"></i> 전송 중...';
             status.classList.add('hidden');
@@ -379,36 +390,27 @@
                 const response = await fetch(event.target.action, {
                     method: form.method,
                     body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
 
                 if (response.ok) {
-                    // 성공 시 처리
                     status.innerHTML = "✅ 지원서가 성공적으로 전송되었습니다! 곧 연락드리겠습니다.";
                     status.className = "mt-6 text-center p-6 rounded-2xl font-bold bg-green-50 text-green-700 block fade-in";
-                    form.reset(); // 입력폼 초기화
+                    form.reset();
                 } else {
-                    // 오류 응답 시 처리
-                    const errorData = await response.json();
-                    status.innerHTML = "❌ 제출 중 오류가 발생했습니다: " + (errorData.errors ? errorData.errors.map(e => e.message).join(', ') : "다시 시도해주세요.");
+                    status.innerHTML = "❌ 제출 중 오류가 발생했습니다. 다시 시도해주세요.";
                     status.className = "mt-6 text-center p-6 rounded-2xl font-bold bg-red-50 text-red-700 block fade-in";
                 }
             } catch (error) {
-                // 네트워크 오류 시 처리
                 status.innerHTML = "❌ 서버와 연결할 수 없습니다. 인터넷 연결을 확인해주세요.";
                 status.className = "mt-6 text-center p-6 rounded-2xl font-bold bg-red-50 text-red-700 block fade-in";
             } finally {
-                // 버튼 상태 복구
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = '<span>지원서 제출하기</span> <i class="fas fa-paper-plane text-sm"></i>';
             }
         }
 
         form.addEventListener("submit", handleSubmit);
-
-        // 초기 페이지 설정
         window.onload = () => showPage('home');
     </script>
 </body>
