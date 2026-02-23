@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼성생명 GFC 모집 - 당신의 성공 파트너</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .Samsung-blue { color: #034EA2; }
+        .bg-Samsung-blue { background-color: #034EA2; }
+        .hover-Samsung-blue:hover { background-color: #023b7a; }
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 cursor-pointer" onclick="showPage('home')">
+                    <div class="flex items-center gap-2">
+                        <!-- Simple Logo Representation -->
+                        <div class="bg-Samsung-blue text-white font-bold px-3 py-1 rounded text-lg">SAMSUNG</div>
+                        <span class="font-bold text-xl text-slate-800 tracking-tight">삼성생명 GFC</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="showPage('sub1')" class="text-slate-600 hover:text-Samsung-blue font-medium transition">직무 소개</button>
+                    <button onclick="showPage('sub2')" class="text-slate-600 hover:text-Samsung-blue font-medium transition">급여 및 혜택</button>
+                    <button onclick="showPage('sub3')" class="text-slate-600 hover:text-Samsung-blue font-medium transition">담당자 안내</button>
+                    <button onclick="showPage('sub4')" class="bg-Samsung-blue text-white px-5 py-2 rounded-full font-bold hover:bg-blue-800 transition shadow-lg">지원하기</button>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-600 hover:text-Samsung-blue focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <button onclick="showPage('sub1'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-Samsung-blue font-medium">직무 소개</button>
+                <button onclick="showPage('sub2'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-Samsung-blue font-medium">급여 및 혜택</button>
+                <button onclick="showPage('sub3'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-slate-600 hover:bg-slate-50 hover:text-Samsung-blue font-medium">담당자 안내</button>
+                <button onclick="showPage('sub4'); toggleMobileMenu()" class="block w-full text-left px-3 py-2 text-Samsung-blue font-bold">지원하기</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    <div id="home" class="page-section pt-20">
+        
+        <!-- Hero Section -->
+        <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://loremflickr.com/1600/900/business,office" alt="Office Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-slate-900/70"></div>
+            </div>
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-500/30 text-blue-100 border border-blue-400/50 text-sm font-semibold mb-4 backdrop-blur-sm">
+                    2024년 신입/경력 GFC 특별채용
+                </span>
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                    당신의 가치를 증명하는 곳<br>
+                    <span class="text-blue-300">삼성생명 GFC</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-200 mb-10 font-light">
+                    기본급 150만원 + 성과급 = <strong class="text-white font-bold">월 500만원 이상</strong>의 안정적 고수익.<br>
+                    법인영업과 CEO컨설팅 전문가로 성장할 당신을 기다립니다.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showPage('sub4')" class="bg-white text-Samsung-blue px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition shadow-xl transform hover:-translate-y-1">
+                        지금 바로 지원하기
+                    </button>
+                    <button onclick="showPage('sub1')" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">
+                        직무 자세히 보기
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">왜 삼성생명 GFC인가요?</h2>
+                    <p class="text-slate-500 text-lg">최고의 금융 전문가를 위한 최고의 환경을 제공합니다.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Feature 1 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-Samsung-blue transition duration-300">
+                            <i class="fas fa-won-sign text-2xl text-Samsung-blue group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">압도적인 급여 체계</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            초기 정착을 위한 <strong class="text-Samsung-blue">기본급 150만원</strong>을 보장하며, 성과에 따른 인센티브로 억대 연봉에 도전할 수 있습니다.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-Samsung-blue transition duration-300">
+                            <i class="fas fa-briefcase text-2xl text-Samsung-blue group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">법인/CEO 전문 컨설팅</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            단순 영업이 아닌, 기업의 재무/세무/노무를 다루는 <strong class="text-Samsung-blue">전문 컨설턴트</strong>로서의 커리어를 쌓을 수 있습니다.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                        <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-Samsung-blue transition duration-300">
+                            <i class="fas fa-graduation-cap text-2xl text-Samsung-blue group-hover:text-white transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-900">체계적인 교육 시스템</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            금융 지식이 없어도 괜찮습니다. 삼성생명만의 <strong class="text-Samsung-blue">체계적인 교육 커리큘럼</strong>이 전문가로 성장시켜 드립니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Income Structure Teaser -->
+        <section class="py-20 bg-slate-900 text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">노력한 만큼 보상받는<br>투명한 수익 구조</h2>
+                    <p class="text-slate-400 mb-8 text-lg">
+                        안정적인 기본급 위에 쌓이는 무한한 성과급.<br>
+                        당신의 열정이 곧 당신의 연봉이 됩니다.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>초기 정착 지원금 (기본급) 제공</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>업계 최고 수준의 성과 수수료</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-green-400"></i>
+                            <span>자녀 학자금 및 건강검진 등 복지 혜택</span>
+                        </li>
+                    </ul>
+                    <button onclick="showPage('sub2')" class="mt-8 text-white border-b border-white pb-1 hover:text-blue-300 hover:border-blue-300 transition">
+                        급여 자세히 알아보기 <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+                <div class="w-full md:w-1/2 relative">
+                    <img src="https://loremflickr.com/800/600/chart,growth" alt="Growth Chart" class="rounded-xl shadow-2xl opacity-90 hover:opacity-100 transition duration-500">
+                    <div class="absolute -bottom-6 -right-6 bg-white text-slate-900 p-6 rounded-xl shadow-lg hidden md:block">
+                        <p class="text-sm text-slate-500">평균 월 소득</p>
+                        <p class="text-3xl font-bold text-Samsung-blue">₩5,000,000+</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 bg-gradient-to-br from-blue-800 to-blue-900 text-center px-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">지금이 가장 빠른 시작입니다</h2>
+            <p class="text-blue-100 text-lg mb-10 max-w-2xl mx-auto">
+                망설이는 순간에도 기회는 지나갑니다. <br>
+                김훈 담당자와 함께 성공적인 금융 전문가의 길을 걸어보세요.
+            </p>
+            <button onclick="showPage('sub4')" class="bg-white text-blue-900 px-10 py-4 rounded-full font-bold text-xl shadow-2xl hover:bg-blue-50 transition transform hover:scale-105">
+                무료 상담 신청하기
+            </button>
+        </section>
+    </div>
+
+    <!-- Sub Page 1: About GFC -->
+    <div id="sub1" class="page-section hidden pt-24 min-h-screen pb-20 fade-in">
+        <div class="max-w-4xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> 메인으로 돌아가기
+            </button>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://loremflickr.com/1600/900/meeting,consulting');">
+                    <div class="w-full h-full bg-black/40 flex items-center justify-center">
+                        <h2 class="text-4xl font-bold text-white">GFC 직무 상세</h2>
+                    </div>
+                </div>
+                <div class="p-8 md:p-12">
+                    <h3 class="text-2xl font-bold text-Samsung-blue mb-4">GFC(Group Financial Consultant)란?</h3>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        삼성생명 GFC는 기업(법인) 및 CEO를 대상으로 재무, 세무, 노무, 은퇴 설계 등 종합적인 금융 컨설팅을 제공하는 <strong>기업 금융 전문가</strong>입니다. 단순한 보험 영업을 넘어 기업의 리스크를 관리하고 자산을 증식시키는 파트너 역할을 수행합니다.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-building text-Samsung-blue mr-2"></i>주요 업무</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li>법인세 절세 및 CEO 자산 관리</li>
+                                <li>가업 승계 및 상속/증여 컨설팅</li>
+                                <li>임직원 퇴직연금 및 단체보험 설계</li>
+                                <li>기업 리스크 관리 솔루션 제공</li>
+                            </ul>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-tie text-Samsung-blue mr-2"></i>인재상</h4>
+                            <ul class="list-disc list-inside text-slate-600 space-y-2">
+                                <li>도전적이고 성취 지향적인 분</li>
+                                <li>금융 전문가로 성장하고 싶으신 분</li>
+                                <li>폭넓은 인적 네트워크를 원하시는 분</li>
+                                <li>성실함과 신뢰를 중요시하는 분</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-Samsung-blue mb-2">특별 교육 프로그램</h4>
+                        <p class="text-slate-700 text-sm">
+                            입사 후 삼성생명 연수원에서 진행되는 체계적인 교육 과정을 통해 금융 비전공자도 최고의 전문가로 성장할 수 있도록 지원합니다. (세무사, 노무사 등 전문가 연계 교육 포함)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Page 2: Benefits -->
+    <div id="sub2" class="page-section hidden pt-24 min-h-screen pb-20 fade-in">
+        <div class="max-w-4xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> 메인으로 돌아가기
+            </button>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">급여 및 복지 혜택</h2>
+                    <p class="text-slate-500 mb-10">업계 최고 수준의 대우로 당신의 성공을 지원합니다.</p>
+
+                    <div class="space-y-8">
+                        <!-- Salary Section -->
+                        <div class="border-l-4 border-Samsung-blue pl-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">💰 안정적인 소득 구조</h3>
+                            <p class="text-slate-600 mb-4">
+                                초기 정착에 어려움이 없도록 <span class="bg-yellow-100 px-1 font-bold">기본급 150만원</span>을 보장해 드립니다.
+                            </p>
+                            <div class="bg-slate-100 rounded-lg p-4 font-mono text-sm md:text-base">
+                                <div class="flex justify-between mb-2">
+                                    <span>기본급 (정착지원금)</span>
+                                    <span class="font-bold">150만원</span>
+                                </div>
+                                <div class="flex justify-between mb-2 text-slate-500">
+                                    <span>+ 성과 수수료</span>
+                                    <span>α (무제한)</span>
+                                </div>
+                                <div class="border-t border-slate-300 my-2"></div>
+                                <div class="flex justify-between text-Samsung-blue font-bold text-lg">
+                                    <span>예상 월 소득</span>
+                                    <span>500만원 + @</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Welfare Section -->
+                        <div class="border-l-4 border-green-500 pl-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">🎁 프리미엄 복지 혜택</h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-check text-green-500 mt-1"></i>
+                                    <div>
+                                        <p class="font-bold text-slate-700">자녀 학자금 지원</p>
+                                        <p class="text-xs text-slate-500">중/고/대학 학자금 지원</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-check text-green-500 mt-1"></i>
+                                    <div>
+                                        <p class="font-bold text-slate-700">건강검진 지원</p>
+                                        <p class="text-xs text-slate-500">본인 및 배우자 종합검진</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-check text-green-500 mt-1"></i>
+                                    <div>
+                                        <p class="font-bold text-slate-700">경조사 지원</p>
+                                        <p class="text-xs text-slate-500">각종 경조금 및 휴가 제공</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-check text-green-500 mt-1"></i>
+                                    <div>
+                                        <p class="font-bold text-slate-700">해외 연수 기회</p>
+                                        <p class="text-xs text-slate-500">우수 성과자 해외 컨퍼런스</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 text-center">
+                        <button onclick="showPage('sub4')" class="bg-Samsung-blue text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition">
+                            혜택 받고 지원하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Page 3: Manager Info -->
+    <div id="sub3" class="page-section hidden pt-24 min-h-screen pb-20 fade-in">
+        <div class="max-w-4xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> 메인으로 돌아가기
+            </button>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Profile Card -->
+                <div class="md:col-span-1">
+                    <div class="bg-white rounded-3xl shadow-xl p-6 text-center sticky top-24">
+                        <div class="w-32 h-32 bg-slate-200 rounded-full mx-auto mb-4 overflow-hidden">
+                            <img src="https://loremflickr.com/400/400/man,business" alt="김훈 담당자" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900">김훈</h3>
+                        <p class="text-Samsung-blue font-medium mb-4">채용 담당자 / 멘토</p>
+                        <div class="space-y-3 text-left text-sm text-slate-600">
+                            <p><i class="fas fa-phone mr-2 text-slate-400"></i>010-4892-2809</p>
+                            <p><i class="fas fa-envelope mr-2 text-slate-400"></i>mylastmath@gmail.com</p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <p class="text-xs text-slate-500 italic">"두려워하지 말고 도전하세요. 제가 처음부터 끝까지 돕겠습니다."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Info -->
+                <div class="md:col-span-2 space-y-8">
+                    <div class="bg-white rounded-3xl shadow-xl p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">근무지 안내</h3>
+                        <p class="text-slate-600 mb-6">
+                            부산의 중심, 쾌적한 오피스 환경에서 근무합니다.<br>
+                            <span class="font-bold text-slate-800">주소: 부산진구 중앙대로 639</span>
+                        </p>
+                        <!-- Map Embed -->
+                        <div class="w-full h-64 bg-slate-100 rounded-xl overflow-hidden">
+                            <iframe 
+                                width="100%" 
+                                height="100%" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                marginheight="0" 
+                                marginwidth="0" 
+                                src="https://maps.google.com/maps?q=부산진구%20중앙대로%20639&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-900 text-white rounded-3xl shadow-xl p-8">
+                        <h3 class="text-xl font-bold mb-3">함께하는 팀 문화</h3>
+                        <p class="text-blue-200 leading-relaxed">
+                            저희 팀은 경쟁보다는 협력을 중요시합니다. 신입 GFC가 오시면 선배 멘토가 1:1로 배정되어 현장 동행부터 계약 체결 노하우까지 아낌없이 전수해 드립니다. 혼자가 아닙니다. 함께 성장합시다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Page 4: Apply Form -->
+    <div id="sub4" class="page-section hidden pt-24 min-h-screen pb-20 fade-in">
+        <div class="max-w-2xl mx-auto px-4">
+            <button onclick="showPage('home')" class="mb-8 text-slate-500 hover:text-Samsung-blue font-medium flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i> 메인으로 돌아가기
+            </button>
+            
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+                <div class="bg-Samsung-blue p-8 text-center">
+                    <h2 class="text-3xl font-bold text-white mb-2">입사 지원하기</h2>
+                    <p class="text-blue-200">간단한 정보를 남겨주시면 김훈 담당자가 직접 연락드립니다.</p>
+                </div>
+                
+                <div class="p-8 md:p-12">
+                    <form action="https://formspree.io/f/xjgepopj" method="POST" class="space-y-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-700 mb-1">이름</label>
+                            <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-Samsung-blue focus:border-transparent outline-none transition" placeholder="홍길동">
+                        </div>
+                        
+                        <!-- Contact -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">연락처</label>
+                            <input type="tel" name="phone" id="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-Samsung-blue focus:border-transparent outline-none transition" placeholder="010-0000-0000">
+                        </div>
+
+                        <!-- Age/Experience -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-slate-700 mb-1">나이</label>
+                                <input type="number" name="age" id="age" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-Samsung-blue focus:border-transparent outline-none transition" placeholder="만 나이">
+                            </div>
+                            <div>
+                                <label for="career" class="block text-sm font-medium text-slate-700 mb-1">경력사항</label>
+                                <select name="career" id="career" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-Samsung-blue focus:border-transparent outline-none transition bg-white">
+                                    <option value="new">신입</option>
+                                    <option value="experienced">경력 (1~3년)</option>
+                                    <option value="expert">경력 (3년 이상)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-slate-700 mb-1">문의사항 (선택)</label>
+                            <textarea name="message" id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-Samsung-blue focus:border-transparent outline-none transition" placeholder="궁금하신 점이나 면접 희망 일정을 적어주세요."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-Samsung-blue text-white font-bold py-4 rounded-lg text-lg hover:bg-blue-800 transition shadow-lg transform active:scale-95">
+                            지원서 제출하기
+                        </button>
+                        
+                        <p class="text-xs text-center text-slate-400 mt-4">
+                            제출해주신 개인정보는 채용 상담 목적으로만 사용됩니다.
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Direct Contact Info -->
+            <div class="mt-8 text-center">
+                <p class="text-slate-600">직접 연락하고 싶으신가요?</p>
+                <div class="flex justify-center gap-4 mt-2">
+                    <a href="tel:010-4892-2809" class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md transition text-slate-800">
+                        <i class="fas fa-phone text-Samsung-blue"></i> 010-4892-2809
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">삼성생명 GFC 모집</h4>
+                    <p class="mb-2">담당자: 김훈</p>
+                    <p class="mb-2">연락처: 010-4892-2809</p>
+                    <p>이메일: mylastmath@gmail.com</p>
+                </div>
+                <div class="md:text-right">
+                    <p class="mb-2">부산진구 중앙대로 639</p>
+                    <p class="text-sm text-slate-600 mt-4">
+                        본 사이트는 삼성생명 GFC 채용을 위한 리크루팅 페이지입니다.<br>
+                        Copyright © 2024 Samsung Life Insurance GFC Recruitment. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // SPA Navigation Logic
+        function showPage(pageId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Show target section
+            const target = document.getElementById(pageId);
+            if (target) {
+                target.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Initial Load
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
